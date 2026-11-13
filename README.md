@@ -3,10 +3,12 @@
 A friendly, **simulation-only** look at Bitcoin in pounds. Nothing here trades, holds or touches real money, and there are no accounts, keys or sign-ins.
 
 ## Try it
-Open `index.html` in a browser, or enable **GitHub Pages** (repository **Settings → Pages → Deploy from a branch → main / root**). The site is at `https://gunpowderstudios.github.io/bitcoin-grower/`.
+Open `index.html` in a browser, or enable **GitHub Pages** (repository **Settings → Pages → Deploy from a branch → main / root**). The site is at `https://gunpowderstudios.github.io/bitcoin-garden/`.
 
 ## What's on the site
 **Today's Prices** (`index.html`): the live Bitcoin price in pounds (public, key-free tickers: Kraken, then CoinGecko, refreshed about every 30 seconds while the tab is visible; if neither responds the newest daily close is shown and labelled), a chart with 1H / 24H / 1W / 1M / 1Y / All tabs, and a history-based "weather forecast" of where an amount might end up.
+
+**What is Bitcoin?** (`what-is-bitcoin.html`): a beginner-friendly guide to Bitcoin's origins, how the network prevents double-spending, and a few stories from its early years.
 
 **Time Machine** (`time-machine.html`) has three tabs:
 - **🚀 Forward in time** (opens first): plant (or already own) an amount today and watch three gardens grow: *Tough Times*, *Middle Ground* and *Boom Times*. They are the 10th, 50th and 90th percentile of what happened after every past planting day. History, not a prediction.
@@ -27,7 +29,7 @@ Open `index.html` in a browser, or enable **GitHub Pages** (repository **Setting
 ## Code layout
 Plain ES modules, no build step. Pure logic is unit tested (`npm test` in the repository root, Node 22): `time-machine-engine.js` (simulation: `hold`, `cashin`, plus an unused legacy `grow` rule; plant stages and coins), `forecast-engine.js` (percentile forecasts and `cashInForecast`), `price-data.js`, `live-price.js`, `price-ranges.js`. Page code: `garden.js` (Today's Prices), `time-machine.js`, `time-machine-plant.js`, `time-machine-race.js`, `time-machine-sound.js`. Bump the version in `version.json`, `package.json`, `bot/package.json`, `VERSION`, the HTML version tags, every `?v=` import query and the line below together.
 
-Version: **1.14.7** (displayed in the app from `version.json`).
+Version: **1.14.8** (displayed in the app from `version.json`).
 
 ## Sharing
 Share the GitHub Pages link; each visitor runs their own simulation in their own browser.
@@ -48,6 +50,7 @@ Future multi-user requirements: independently authenticated identities, separate
 
 ## Release notes (short)
 - **1.14.3** Tidy-up, no interface changes: removed the retired gardener, the old Grower strategy's hidden settings and the compare toggle from the site; fixed leftover wording; refreshed the browser tests and this README.
+- **1.14.8** Added the What is Bitcoin? beginner guide.
 - **1.14.7** Back in time quick dates are in date order (1 week, 1 month, 1 year, 5 years, very start); 2017, 2020 and 2022 removed.
 - **1.14.6** Back in time shows the facts straight away: what your amount, planted on the chosen day, would be worth at the newest price (price then and now, Bitcoin owned, multiple). The animated journey is still below.
 - **1.14.5** Back in time: quick date choices for 1 week, 1 month and 1 year ago.

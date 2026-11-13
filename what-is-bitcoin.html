@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>What is Bitcoin? History &amp; How It Works — The Bitcoin Garden</title>
+<meta name="description" content="A plain-English guide to Bitcoin: where it came from, how it stops the same money being spent twice, and the story of two pizzas for 10,000 BTC.">
+<meta name="theme-color" content="#0c1d14">
+<link rel="icon" type="image/png" href="./the_bitcoin_garden_app_icon.png?v=1.14.8">
+<link rel="apple-touch-icon" href="./the_bitcoin_garden_app_icon.png?v=1.14.8">
+<link rel="manifest" href="./site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Bitcoin Garden">
+<link rel="stylesheet" href="./time-machine.css?v=1.14.8">
+<style>
+.learn-hero{display:grid;grid-template-columns:clamp(76px,24vw,192px) minmax(0,1fr);gap:clamp(12px,3vw,28px);align-items:center}
+.learn-hero a{display:block;line-height:0;border-radius:12px}
+.learn-hero img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.learn-title{margin:0 0 8px;font-size:clamp(24px,5.1vw,47px);line-height:1.12}
+.learn-title .vtag{vertical-align:middle;font-size:12px;white-space:nowrap}
+.learn-kicker{margin:0 0 7px;color:#fee735;font-weight:800;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.learn-page p{line-height:1.65}
+.learn-hero p:last-child{margin:0;color:var(--mute)}
+.learn-page .card a{color:#ffe27a;text-underline-offset:.18em}
+.learn-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.learn-tile{border:1px solid #497c58;border-radius:14px;background:#142b1e;padding:16px}
+.learn-tile h3,.learn-tile p:last-child{margin-bottom:0}
+.learn-tile h3{margin-top:0}
+.learn-tile p{margin-top:6px}
+.learn-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0;list-style:none;counter-reset:learn-step}
+.learn-steps li{counter-increment:learn-step}
+.learn-steps li::before{content:counter(learn-step);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;margin-bottom:9px;background:var(--gold);color:#24200e;font-weight:800}
+.learn-history{list-style:none;margin:14px 0 0;padding:0}
+.learn-history li{display:grid;grid-template-columns:minmax(94px,118px) minmax(0,1fr);gap:12px;border-top:1px solid #497c58;padding:13px 0}
+.learn-history time,.learn-number{color:#fee735;font-weight:800}
+.learn-history p{margin:4px 0 0}
+.learn-try{margin-top:16px;padding:0 14px;border:1px solid #6a7f54;border-radius:12px;background:#213927}
+.learn-try summary{cursor:pointer;display:list-item;padding:12px 0;font-weight:700;color:#fff2b0}
+.learn-try p{margin:0 0 13px}
+.learn-number{font-size:clamp(22px,4vw,34px);line-height:1.2}
+.learn-source{font-size:.875rem}
+.learn-page footer{color:var(--mute);text-align:center;margin-top:24px;font-size:.875rem}
+@media(max-width:640px){.learn-grid,.learn-steps{grid-template-columns:1fr}}
+@media(max-width:380px){.learn-history li{grid-template-columns:1fr;gap:3px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#in-plain-english">Skip to the guide</a>
+<main class="learn-page">
+<header class="learn-hero">
+  <a href="./" aria-label="Return to Bitcoin Garden home"><img src="./the_bitcoin_garden_app_icon.png?v=transparent-2" alt="" width="142" height="142"></a>
+  <div>
+    <p class="learn-kicker">The Bitcoin Garden · Beginner’s guide</p>
+    <h1 class="learn-title">What is Bitcoin? <span class="vtag">v1.14.8</span></h1>
+    <p>Digital money, a mysterious inventor and two very famous pizzas.</p>
+  </div>
+</header>
+<nav aria-label="The Bitcoin Garden sections">
+  <a href="./">🌱 Today’s Prices</a>
+  <a href="./time-machine.html">⏳ Time Machine</a>
+  <a class="active" href="./what-is-bitcoin.html" aria-current="page">₿ What is Bitcoin?</a>
+  <a href="./green-garden.html">🌍 How Green Is Bitcoin?</a>
+  <a href="./buy-bitcoin.html">🔐 Buying &amp; Taxes</a>
+  <a href="./bitcoin-chatter.html">🗞️ Bitcoin News</a>
+</nav>
+<section class="card" aria-labelledby="in-plain-english">
+  <h2 id="in-plain-english" tabindex="-1">Bitcoin in plain English</h2>
+  <p><strong>Bitcoin is digital money you can send over the internet without a bank having to approve the payment.</strong> Bitcoin is the name of the network, and bitcoin (BTC) is the money that moves on it. Instead of one company keeping the accounts, computers around the world can keep and check their own copies of a shared public record.</p>
+</section>
+<section class="card" aria-labelledby="clever-bit">
+  <h2 id="clever-bit">The clever bit: you can’t spend the same bitcoin twice</h2>
+  <p>You can copy a photo and send it to two people. That’s great for photos, but disastrous for money. Banks solve this by keeping the official record of who paid whom. Bitcoin’s trick is getting a network of strangers to agree on a payment history without one official bookkeeper.</p>
+  <ol class="learn-steps" role="list">
+    <li class="learn-tile"><h3>You sign</h3><p>Your wallet uses a private key to sign a payment and prove you’re allowed to spend those funds, without revealing the key itself.</p></li>
+    <li class="learn-tile"><h3>Miners do the work</h3><p>Miners compete to add a batch of payments, called a block. Finding a valid answer takes computing power and electricity. Checking it is quick. That’s called proof of work.</p></li>
+    <li class="learn-tile"><h3>The network checks</h3><p>Computers called nodes independently check the rules. Each block links to the previous one, so rewriting old payments means redoing the work and catching up with the rest of the network.</p></li>
+  </ol>
+  <details class="learn-try">
+    <summary>What if I try to pay a baker and a bookshop with the same bitcoin?</summary>
+    <p>Only one of those payments can be recorded in the same valid history. Once the baker’s payment is in that history, the nodes reject a later attempt to spend the same funds at the bookshop. That’s what people mean by <strong>double-spending</strong>.</p>
+  </details>
+  <p class="learn-source"><a href="https://bitcoin.org/en/how-it-works">More on how Bitcoin works</a> · <a href="./green-garden.html">Why mining uses electricity</a></p>
+</section>
+<section class="card" aria-labelledby="early-days">
+  <h2 id="early-days">How it started</h2>
+  <ol class="learn-history" role="list">
+    <li><time datetime="2008-10-31">31 Oct 2008</time><div><strong>An idea lands in an inbox</strong><p>Someone using the name Satoshi Nakamoto shares a nine-page paper on a cryptography mailing list. It proposes a way to send electronic cash directly between people. Satoshi’s real identity remains unconfirmed. <a href="https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html">See the original email</a>.</p></div></li>
+    <li><time datetime="2009-01-03">3 Jan 2009</time><div><strong>The first block has a British newspaper headline</strong><p>Bitcoin’s first entry, the Genesis Block, contains a headline from <em>The Times</em> about a possible second bank bailout. It’s a date stamp from the middle of the financial crisis. Whether Satoshi intended it as a political message is open to interpretation. <a href="https://btc.com/en/halls/origins">Explore the Genesis Block</a>.</p></div></li>
+    <li><time datetime="2009-01-12">12 Jan 2009</time><div><strong>One person pays another</strong><p>Satoshi sends 10 BTC to software developer Hal Finney in the first recorded person-to-person Bitcoin transfer. It’s a test that proves the software can do what the paper proposed. <a href="https://www.guinnessworldrecords.com/world-records/696243-first-bitcoin-transaction">Read about the first transfer</a>.</p></div></li>
+  </ol>
+</section>
+<section class="card" aria-labelledby="odd-stories">
+  <h2 id="odd-stories">Pizza, coffee and tiny fractions</h2>
+  <div class="learn-grid">
+    <article class="learn-tile"><h3>🍕 Two pizzas for 10,000 BTC</h3><p>On 22 May 2010, programmer Laszlo Hanyecz reported that he’d traded 10,000 BTC for two pizzas. A forum member took the bitcoin and arranged the delivery. Bitcoin fans mark 22 May as Bitcoin Pizza Day. <a href="https://bitcointalk.org/index.php?topic=137.0">Read the original pizza thread</a>.</p></article>
+    <article class="learn-tile"><h3>☕ An ATM in a coffee shop</h3><p>In 2013, a Vancouver coffee shop became home to a Bitcoin ATM. It let customers exchange cash for bitcoin or sell bitcoin for cash. It wasn’t a bank branch. It was Waves Coffee. <a href="https://www.wired.com/2013/10/bitcoin-atm-gallery/">See the machine</a>.</p></article>
+    <article class="learn-tile"><h3><span class="learn-number">100 million</span> sats</h3><p>One bitcoin is made up of 100 million satoshis, or “sats”, named after Bitcoin’s creator. Think pounds and pennies, but with much smaller fractions.</p></article>
+    <article class="learn-tile"><h3><span class="learn-number">21 million</span> BTC</h3><p>That’s the supply limit under Bitcoin’s rules. The number of new bitcoins awarded for adding a block halves roughly every four years, an event known as the “halving”. <a href="https://bitcoin.org/en/faq#how-are-bitcoins-created">Read about the supply rules</a>.</p></article>
+  </div>
+</section>
+<section class="card" aria-labelledby="trade-offs">
+  <h2 id="trade-offs">What’s the catch?</h2>
+  <p>The public record is searchable, so Bitcoin isn’t automatically anonymous. If you manage your own keys and lose access to them without a backup, there’s no central helpdesk to restore your wallet. Mining takes electricity, and the price in pounds can swing sharply. The clever technology and the price are two different things.</p>
+  <p><a href="https://bitcoin.org/bitcoin.pdf">Read Satoshi’s original white paper (PDF)</a> · <a href="./time-machine.html">Explore past prices in the Time Machine</a></p>
+</section>
+<footer>The Bitcoin Garden is a simulation. No real money moves here.</footer>
+</main>
+</body>
+</html>

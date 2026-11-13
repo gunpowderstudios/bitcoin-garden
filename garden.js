@@ -1,10 +1,10 @@
-import {initCurrency,money,moneyShort,toGBP,currency,symbol} from './currency.js?v=1.14.7-c1';
+import {initCurrency,money,moneyShort,toGBP,currency,symbol} from './currency.js?v=1.14.8-c1';
 // The Bitcoin Garden — Today's Prices page controller. Simulation only; read-only public price data.
-import { VERSION, signedPct, addDays, dayNumber, describeData } from './time-machine-engine.js?v=1.14.7';
-import { loadHistory } from './price-data.js?v=1.14.7';
-import { fetchLive, fetchSeries } from './live-price.js?v=1.14.7';
-import { RANGES, RANGE_ORDER, historySeries, changeOver, trimToWindow, downsample, axisLabel, tooltipLabel } from './price-ranges.js?v=1.14.7';
-import { forecast, describe, changeSince, SINCE_CHOICES } from './forecast-engine.js?v=1.14.7';
+import { VERSION, signedPct, addDays, dayNumber, describeData } from './time-machine-engine.js?v=1.14.8';
+import { loadHistory } from './price-data.js?v=1.14.8';
+import { fetchLive, fetchSeries } from './live-price.js?v=1.14.8';
+import { RANGES, RANGE_ORDER, historySeries, changeOver, trimToWindow, downsample, axisLabel, tooltipLabel } from './price-ranges.js?v=1.14.8';
+import { forecast, describe, changeSince, SINCE_CHOICES } from './forecast-engine.js?v=1.14.8';
 
 const $ = id => document.getElementById(id);
 await initCurrency();

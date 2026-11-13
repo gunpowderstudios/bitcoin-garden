@@ -1,14 +1,14 @@
-import {initCurrency,money,moneyShort,toGBP,currency,symbol} from './currency.js?v=1.14.7-c1';
-// Bitcoin Garden Time Machine — page controller (v1.14.7). Simulation only: no accounts, keys or trading.
+import {initCurrency,money,moneyShort,toGBP,currency,symbol} from './currency.js?v=1.14.8-c1';
+// Bitcoin Garden Time Machine — page controller (v1.14.8). Simulation only: no accounts, keys or trading.
 import {
   VERSION, DEFAULTS, parseCSV, describeData, validateSettings, selectRange, simulate, plantFor, STAGES,
   addDays, addYears, dayNumber, signedPct
-} from './time-machine-engine.js?v=1.14.7';
-import { createPlant } from './time-machine-plant.js?v=1.14.7-fruit-2';
-import { createSound } from './time-machine-sound.js?v=1.14.7';
-import { loadHistory } from './price-data.js?v=1.14.7';
-import { createRace } from './time-machine-race.js?v=1.14.7-fruit-2';
-import { forecast, describe as describeForecast, futureFrames, cashInForecast, SINCE_CHOICES } from './forecast-engine.js?v=1.14.7';
+} from './time-machine-engine.js?v=1.14.8';
+import { createPlant } from './time-machine-plant.js?v=1.14.8-fruit-2';
+import { createSound } from './time-machine-sound.js?v=1.14.8';
+import { loadHistory } from './price-data.js?v=1.14.8';
+import { createRace } from './time-machine-race.js?v=1.14.8-fruit-2';
+import { forecast, describe as describeForecast, futureFrames, cashInForecast, SINCE_CHOICES } from './forecast-engine.js?v=1.14.8';
 
 const $ = id => document.getElementById(id);
 await initCurrency();

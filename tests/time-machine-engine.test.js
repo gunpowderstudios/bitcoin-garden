@@ -236,14 +236,24 @@ test('cashAt is validated and defaults to 2x', () => {
 
 // ---------- project hygiene ----------
 const read = f => fs.readFileSync(new URL('../' + f, import.meta.url), 'utf8');
-test('version is 1.14.7 everywhere it should be', () => {
-  assert.equal(VERSION, '1.14.7');
-  assert.equal(JSON.parse(read('version.json')).version, '1.14.7');
-  assert.equal(JSON.parse(read('package.json')).version, '1.14.7');
-  assert.equal(JSON.parse(read('bot/package.json')).version, '1.14.7');
-  assert.match(read('time-machine.html'), /id="version">v1\.14\.7</);
-  assert.match(read('README.md'), /Version: \*\*1\.14\.7\*\*/);
-  assert.match(read('index.html'), /id="version">v1\.14\.7</);
+test('version is 1.14.8 everywhere it should be', () => {
+  assert.equal(VERSION, '1.14.8');
+  assert.equal(JSON.parse(read('version.json')).version, '1.14.8');
+  assert.equal(JSON.parse(read('package.json')).version, '1.14.8');
+  assert.equal(JSON.parse(read('bot/package.json')).version, '1.14.8');
+  assert.match(read('time-machine.html'), /id="version">v1\.14\.8</);
+  assert.match(read('README.md'), /Version: \*\*1\.14\.8\*\*/);
+  assert.match(read('index.html'), /id="version">v1\.14\.8</);
+});
+test('the Bitcoin beginner guide is linked once from every public page', () => {
+  const pages = ['index.html', 'time-machine.html', 'what-is-bitcoin.html', 'green-garden.html', 'buy-bitcoin.html', 'bitcoin-chatter.html'];
+  for (const page of pages) {
+    const nav = read(page).match(/<nav\b[^>]*>[\s\S]*?<\/nav>/)?.[0] || '';
+    const guideLinks = [...nav.matchAll(/<a\b[^>]*href="\.\/what-is-bitcoin\.html"[^>]*>/g)];
+    assert.equal(guideLinks.length, 1, page);
+    assert.equal(guideLinks[0][0].includes('aria-current="page"'), page === 'what-is-bitcoin.html', page);
+  }
+  assert.match(read('what-is-bitcoin.html'), /<h1\b[^>]*>What is Bitcoin\?/);
 });
 test('every element id the page script uses exists in the HTML', () => {
   for (const [page, script] of [['time-machine.html', 'time-machine.js'], ['time-machine.html', 'time-machine-race.js'], ['index.html', 'garden.js']]) {
