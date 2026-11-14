@@ -86,15 +86,16 @@
 
 <!-- ============ THE FORECAST ============ -->
 <section class="card" aria-labelledby="fc-heading" id="forecast">
-  <h2 id="fc-heading">🌦️ Where could it go? The weather forecast</h2>
+  <h2 id="fc-heading">🌦️ What could my Bitcoin be worth in the future?</h2>
   <p>Nobody can predict Bitcoin. But we can look back and ask: <b>after planting some money on a random day in the past, what did it look like later?</b> The answer is a <b>range</b>, like a weather forecast’s “chance of rain” — not a promise.</p>
   <div class="fcform">
     <div>
-      <label for="fAmount">If I planted it (or have) today…</label>
-      <div class="money"><span aria-hidden="true" data-currency-symbol>£</span><input id="fAmount" type="number" inputmode="decimal" min="1" max="1000000" step="any" value="100"></div>
+      <label for="fAmount">How much are you starting with?</label>
+      <p class="hint" id="fAmountHint">Enter how much you’d like to plant today, or the value of the Bitcoin you already own.</p>
+      <div class="money"><span aria-hidden="true" data-currency-symbol>£</span><input id="fAmount" aria-describedby="fAmountHint" type="number" inputmode="decimal" min="1" max="1000000" step="any" value="100"></div>
     </div>
     <div>
-      <div class="lbl" id="hLabel">…how might it look in…</div>
+      <div class="lbl" id="hLabel">How far ahead?</div>
       <div class="chips" id="horizons" role="group" aria-labelledby="hLabel">
         <button type="button" class="chip" data-days="30" aria-pressed="false">1 month</button>
         <button type="button" class="chip" data-days="365" aria-pressed="true">1 year</button>
